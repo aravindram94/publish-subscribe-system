@@ -25,10 +25,7 @@ Google PubSub scales horizontally depending the load factors. Whereas, our imple
 Google PubSub stores the messages until is delivered at least to one client in each subscription group. Whereas, our PubSub doesn’t store the messages. As soon as the messages are received, they are sent to all the subscribed clients.
 
 
-Apart from major differences mentioned above, some of the basic differences are
-
-1. The client doesn’t wait if the server goes down. The client stops as soon as the server doesn’t respond to the
-heart beats.
-2. Google PubSub was easy to set up as everything was already built. Whereas in the case of own implementation, we had to take care synchronization, race conditions, efficiency and several other factors. Basically google PubSub was done in few hours while it took 2-3 days to build the own system.
+Apart from major differences mentioned above, one overall difference is
+Google PubSub was easy to set up as everything was already built. Whereas in the case of own implementation, we had to take care synchronization, race conditions, efficiency and several other factors. Basically google PubSub was done in few hours while it took 2-3 days to build the own system.
    1. Not writing the code for matching a newly published article with its subscribers.
    2. Making sure the message gets delivered (at least once semantic) to the subscriber.
